@@ -1,13 +1,13 @@
 # cli-contacts-node
 
 list of contacts
-http://joxi.ru/82QwaDMcVzBeQr
+https://monosnap.com/file/0l8VsC60oqlzRLfvUazkecSFREIAcJ
 
 get contact by id
-http://joxi.ru/Vrwkw3nTjR6pbr
+https://monosnap.com/file/KTfGu4aUwMe0IPS3dcAsBpRNvhttka
 
 add new contact
-http://joxi.ru/823y3b4FabRoxr
+https://monosnap.com/file/C4uQetkOtM14veqrM8cfKstKwhJcQu
 
 remove contact
-http://joxi.ru/Q2Kw6V4cyoBN12
+https://monosnap.com/file/SW2NJVZ8XZIPBLwrJoA5pvbCjyvxEg
