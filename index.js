@@ -5,6 +5,7 @@ const {
   addContact,
   removeContact,
 } = require("./contacts");
+const chalk = require("chalk");
 
 const { Command } = require("commander");
 const program = new Command();
@@ -29,19 +30,19 @@ async function invokeAction({ action, id, name, email, phone }) {
 
     case "get":
       const contactId = await getContactById(id);
-      console.log(chalk.blue(contactId));
+      console.log(contactId);
       break;
 
     case "add":
       const newContact = await addContact(name, email, phone);
       console.log(chalk.green("Add new contact"));
-      console.log(chalk.orange(newContact));
+      console.log(newContact);
 
       break;
 
     case "remove":
-      const removeContact = await removeContact(id);
-      console.log(chalk.tomato(removeContact));
+      const removeContactById = await removeContact(id);
+      console.log(removeContactById);
       break;
 
     default:
@@ -50,3 +51,10 @@ async function invokeAction({ action, id, name, email, phone }) {
 }
 
 invokeAction(argv);
+
+// {
+//     "id": 3,
+//     "name": "Kennedy Lane",
+//     "email": "mattis.Cras@nonenimMauris.net",
+//     "phone": "(542) 451-7038"
+//   },
