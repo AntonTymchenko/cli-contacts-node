@@ -1,12 +1,4 @@
-// index.js
-const {
-  listContacts,
-  getContactById,
-  addContact,
-  removeContact,
-} = require("./contacts");
 const chalk = require("chalk");
-
 const { Command } = require("commander");
 const program = new Command();
 program
@@ -16,11 +8,17 @@ program
   .option("-e, --email <type>", "user email")
   .option("-p, --phone <type>", "user phone");
 
+const {
+  listContacts,
+  getContactById,
+  addContact,
+  removeContact,
+} = require("./contacts");
+
 program.parse(process.argv);
 
 const argv = program.opts();
 
-// TODO: рефакторить
 async function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
     case "list":
@@ -52,10 +50,3 @@ async function invokeAction({ action, id, name, email, phone }) {
 }
 
 invokeAction(argv);
-
-// {
-//     "id": 3,
-//     "name": "Kennedy Lane",
-//     "email": "mattis.Cras@nonenimMauris.net",
-//     "phone": "(542) 451-7038"
-//   },
