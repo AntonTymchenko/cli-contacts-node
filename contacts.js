@@ -17,7 +17,7 @@ async function getContactById(contactId) {
   if (!result) {
     return null;
   }
-  console.log(result);
+
   return result;
 }
 

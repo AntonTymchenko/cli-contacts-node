@@ -43,6 +43,7 @@ async function invokeAction({ action, id, name, email, phone }) {
     case "remove":
       const removeContactById = await removeContact(id);
       console.log(removeContactById);
+      console.log(chalk.red("remove contact"));
       break;
 
     default:
